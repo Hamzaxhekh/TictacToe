@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 import Snackbar from 'react-native-snackbar';
-import Icons from './components/Icons';
+import Icons from './src/components/icons';
 
 function App() {
   const [isCross, setIsCross] = useState(false);
@@ -95,7 +95,7 @@ function App() {
     } else {
       return Snackbar.show({
         text: 'Position is already filled',
-        backgroundColor: 'red',
+        backgroundColor: '#f39c12',
         textColor: '#FFF',
       });
     }
@@ -138,7 +138,7 @@ function App() {
       {/* game action */}
       <Pressable style={styles.gameBtn} onPress={reloadGame}>
         <Text style={styles.gameBtnText}>
-          {gameWinner ? 'Start new game' : 'reLoad the game'}
+          {gameWinner ? 'Start new game' : 'Reload the game'}
         </Text>
       </Pressable>
     </SafeAreaView>
